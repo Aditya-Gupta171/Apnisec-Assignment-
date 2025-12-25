@@ -9,11 +9,11 @@ export interface JwtPayload {
 export class JwtService {
   constructor(
     private readonly secret: string,
-    private readonly expiresIn = "15m"
+    private readonly expiresInSeconds: number = 900 
   ) {}
 
   sign(payload: JwtPayload): string {
-    return jwt.sign(payload, this.secret, { expiresIn: this.expiresIn });
+    return jwt.sign(payload, this.secret, { expiresIn: this.expiresInSeconds });
   }
 
   verify(token: string): JwtPayload {
