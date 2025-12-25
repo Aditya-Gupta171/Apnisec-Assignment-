@@ -1,6 +1,5 @@
-# ApniSec – Cloud & VAPT Security Portal
+# ApniSec assignment
 
-ApniSec is a full‑stack security issue tracking portal for Cloud Security, Red Team and VAPT work.  
 It’s built with **Next.js App Router**, **TypeScript**, **Prisma (PostgreSQL/Supabase)** and **Resend email**, following a clean, class‑based backend architecture.
 
 ---
@@ -62,13 +61,6 @@ It’s built with **Next.js App Router**, **TypeScript**, **Prisma (PostgreSQL/S
 - Welcome email on successful registration
 - Notification when a new issue is created
 - Password reset link with secure token
-
-### SEO & DX
-
-- Custom metadata via `app/layout.tsx`
-- `robots.ts` and `sitemap.ts` routes
-- Clean folder structure for backend and frontend
-- Centralised error handling and rate limiting
 
 ---
 
@@ -166,30 +158,7 @@ npx prisma studio   # Prisma DB browser (optional)
 
 ---
 
-## Deployment (Vercel)
 
-1. Push the repo to GitHub/GitLab/Bitbucket.
-2. On https://vercel.com → **New Project** → import this repo.
-3. Set environment variables in Vercel (Project → Settings → Environment Variables):
-   - `DATABASE_URL`
-   - `JWT_SECRET`
-   - `RESEND_API_KEY`
-4. Ensure `package.json` has:
-
-```json
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "postinstall": "prisma generate"
-}
-```
-
-5. Deploy. Vercel will build and host the app.  
-   Use the Vercel URL to demo the full flow (auth, dashboard, profile, reset password).
-
----
 
 ## API Shape
 
